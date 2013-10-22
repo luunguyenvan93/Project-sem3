@@ -30,7 +30,8 @@ namespace DAL
         public void update(Center center)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Update center Set centerName=@centerName where centerID = @centerID", conn);
+            SqlCommand cmd = new SqlCommand("updateCenter", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@centerID", center.centerID);
             cmd.Parameters.Add("@centerName", center.centerName);
             cmd.ExecuteNonQuery();
@@ -39,7 +40,8 @@ namespace DAL
         public void delete(Center center)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Delete center where centerID = @centerID", conn);
+            SqlCommand cmd = new SqlCommand("deleteCenter", conn)
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@centerID", center.centerID);
             cmd.ExecuteNonQuery();
             CloseConnection();
