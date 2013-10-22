@@ -40,5 +40,11 @@ namespace BLL
             center.centerID = centerID;
             centerDAO.delete(center);
         }
+        public DataTable search(string centerName)
+        {
+            DataTable dt = new DataTable();
+            dt = centerDAO.search(centerName);
+            return dt;
+        }
     }
 }

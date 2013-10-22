@@ -103,3 +103,11 @@ as
 begin
 	delete center where centerID = @centerID
 end
+---search data --------------------
+drop proc searchCenter
+create proc searchCenter(@centerName nvarchar(100))
+as
+begin
+	select * from center where centerName like  '%' + @centerName + '%'
+end
+Select * from center where centerName like '%'+'H'+'%'

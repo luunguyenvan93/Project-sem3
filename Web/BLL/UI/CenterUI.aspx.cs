@@ -82,5 +82,12 @@ namespace UI
             grvCenter.EditIndex = -1;
             loadData();
         }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            string centerName = txtSearch.Text;
+            grvCenter.DataSource = centerBUS.search(centerName);
+            grvCenter.DataBind();
+        }
     }
 }

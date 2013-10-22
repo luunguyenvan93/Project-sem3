@@ -52,6 +52,14 @@
                 </td>
             </tr>
             <tr>
+                <td align="left" class="style3" colspan="2">
+                    <asp:Label ID="Label5" runat="server" Text="Search:"></asp:Label>
+                    <asp:TextBox ID="txtSearch" runat="server"></asp:TextBox>
+                    <asp:Button ID="btnSearch" runat="server" onclick="btnSearch_Click" 
+                        Text="Search" />
+                </td>
+            </tr>
+            <tr>
                 <td class="style6">
                     <asp:Label ID="Label1" runat="server" Text="Center ID:"></asp:Label>
                 </td>

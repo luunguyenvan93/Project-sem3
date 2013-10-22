@@ -12,7 +12,9 @@ namespace DAL
         public DataTable getAll()
         {
             OpenConnection();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from center",conn);
+            SqlCommand cmd = new SqlCommand("selectCenter", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable("center");
             da.Fill(dt);
             CloseConnection();
@@ -40,11 +42,23 @@ namespace DAL
         public void delete(Center center)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("deleteCenter", conn)
+            SqlCommand cmd = new SqlCommand("deleteCenter", conn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@centerID", center.centerID);
             cmd.ExecuteNonQuery();
             CloseConnection();
+        }
+        public DataTable search(string centerName)
+        {
+            OpenConnection();
+            SqlCommand cmd = new SqlCommand("searchCenter",conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@centerName",centerName);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            CloseConnection();
+            return dt;
         }
     }
 }
