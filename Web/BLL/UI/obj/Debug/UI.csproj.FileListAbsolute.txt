@@ -9,3 +9,14 @@ D:\eprojectSem3\Web\BLL\UI\bin\DTO.dll
 D:\eprojectSem3\Web\BLL\UI\bin\BLL.pdb
 D:\eprojectSem3\Web\BLL\UI\bin\DAL.pdb
 D:\eprojectSem3\Web\BLL\UI\bin\DTO.pdb
+C:\Users\Luu Bi\Documents\GitHub\Project-sem3\Web\BLL\UI\bin\UI.dll
+C:\Users\Luu Bi\Documents\GitHub\Project-sem3\Web\BLL\UI\bin\UI.pdb
+C:\Users\Luu Bi\Documents\GitHub\Project-sem3\Web\BLL\UI\bin\BLL.dll
+C:\Users\Luu Bi\Documents\GitHub\Project-sem3\Web\BLL\UI\bin\DAL.dll
+C:\Users\Luu Bi\Documents\GitHub\Project-sem3\Web\BLL\UI\bin\DTO.dll
+C:\Users\Luu Bi\Documents\GitHub\Project-sem3\Web\BLL\UI\bin\BLL.pdb
+C:\Users\Luu Bi\Documents\GitHub\Project-sem3\Web\BLL\UI\bin\DAL.pdb
+C:\Users\Luu Bi\Documents\GitHub\Project-sem3\Web\BLL\UI\bin\DTO.pdb
+C:\Users\Luu Bi\Documents\GitHub\Project-sem3\Web\BLL\UI\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Luu Bi\Documents\GitHub\Project-sem3\Web\BLL\UI\obj\Debug\UI.dll
+C:\Users\Luu Bi\Documents\GitHub\Project-sem3\Web\BLL\UI\obj\Debug\UI.pdb

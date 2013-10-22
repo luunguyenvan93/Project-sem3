@@ -21,7 +21,8 @@ namespace DAL
         public void insert(Center center)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Insert Into center Values(@centerName)",conn);
+            SqlCommand cmd = new SqlCommand("addCenter",conn);
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@centerName",center.centerName);
             cmd.ExecuteNonQuery();
             CloseConnection();

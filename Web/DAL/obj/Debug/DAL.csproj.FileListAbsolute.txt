@@ -5,3 +5,10 @@ D:\eprojectSem3\Web\DAL\bin\Debug\DTO.dll
 D:\eprojectSem3\Web\DAL\bin\Debug\DTO.pdb
 D:\eprojectSem3\Web\DAL\obj\Debug\DAL.dll
 D:\eprojectSem3\Web\DAL\obj\Debug\DAL.pdb
+C:\Users\Luu Bi\Documents\GitHub\Project-sem3\Web\DAL\bin\Debug\DAL.dll
+C:\Users\Luu Bi\Documents\GitHub\Project-sem3\Web\DAL\bin\Debug\DAL.pdb
+C:\Users\Luu Bi\Documents\GitHub\Project-sem3\Web\DAL\bin\Debug\DTO.dll
+C:\Users\Luu Bi\Documents\GitHub\Project-sem3\Web\DAL\bin\Debug\DTO.pdb
+C:\Users\Luu Bi\Documents\GitHub\Project-sem3\Web\DAL\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Luu Bi\Documents\GitHub\Project-sem3\Web\DAL\obj\Debug\DAL.dll
+C:\Users\Luu Bi\Documents\GitHub\Project-sem3\Web\DAL\obj\Debug\DAL.pdb
