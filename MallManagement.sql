@@ -41,7 +41,7 @@ Create Table product
     shopID int references Shop(shopID)not null
 )
 
-Create Table gallary
+Create Table gallery
 (
 	imageID int identity primary key,
 	imageName varchar(100) not null unique,
@@ -85,4 +85,21 @@ Create Table Faq
 	phoneNumber char(20) not null,
 	fax char(50) ,
 )
-Select * from center
+--Add data-------
+create proc addCenter(@centerName nvarchar(100))
+as
+begin
+	insert into center values(@centerName)
+end
+--- update data ----------------
+create proc updateCenter(@centerID int,@centerName nvarchar(100))
+as
+begin
+	update center set centerName = @centerName where centerID = @centerID
+end
+---delete data ---------------
+create proc deleteCenter(@centerID int)
+as
+begin
+	delete center where centerID = @centerID
+end
