@@ -1,0 +1,5 @@
+D:\eprojectSem3\Web\WebApplication1\bin\WebApplication1.dll
+D:\eprojectSem3\Web\WebApplication1\bin\WebApplication1.pdb
+D:\eprojectSem3\Web\WebApplication1\obj\Debug\ResolveAssemblyReference.cache
+D:\eprojectSem3\Web\WebApplication1\obj\Debug\WebApplication1.dll
+D:\eprojectSem3\Web\WebApplication1\obj\Debug\WebApplication1.pdb

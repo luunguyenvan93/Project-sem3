@@ -1,0 +1,11 @@
+D:\eprojectSem3\Web\BLL\UI\bin\UI.dll
+D:\eprojectSem3\Web\BLL\UI\bin\UI.pdb
+D:\eprojectSem3\Web\BLL\UI\obj\Debug\ResolveAssemblyReference.cache
+D:\eprojectSem3\Web\BLL\UI\obj\Debug\UI.dll
+D:\eprojectSem3\Web\BLL\UI\obj\Debug\UI.pdb
+D:\eprojectSem3\Web\BLL\UI\bin\BLL.dll
+D:\eprojectSem3\Web\BLL\UI\bin\DAL.dll
+D:\eprojectSem3\Web\BLL\UI\bin\DTO.dll
+D:\eprojectSem3\Web\BLL\UI\bin\BLL.pdb
+D:\eprojectSem3\Web\BLL\UI\bin\DAL.pdb
+D:\eprojectSem3\Web\BLL\UI\bin\DTO.pdb

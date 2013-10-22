@@ -1,0 +1,9 @@
+D:\eprojectSem3\Web\BLL\obj\Debug\ResolveAssemblyReference.cache
+D:\eprojectSem3\Web\BLL\bin\Debug\BLL.dll
+D:\eprojectSem3\Web\BLL\bin\Debug\BLL.pdb
+D:\eprojectSem3\Web\BLL\bin\Debug\DAL.dll
+D:\eprojectSem3\Web\BLL\bin\Debug\DTO.dll
+D:\eprojectSem3\Web\BLL\bin\Debug\DAL.pdb
+D:\eprojectSem3\Web\BLL\bin\Debug\DTO.pdb
+D:\eprojectSem3\Web\BLL\obj\Debug\BLL.dll
+D:\eprojectSem3\Web\BLL\obj\Debug\BLL.pdb

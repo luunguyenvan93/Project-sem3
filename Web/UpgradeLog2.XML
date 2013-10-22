@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Web">
+</Property><Property Name="Solution File" Value="H:\Web\Web.sln">
+</Property><Property Name="User Options File" Value="H:\Web\Web.suo">
+</Property><Property Name="Date" Value="Tuesday, October 22, 2013">
+</Property><Property Name="Time" Value="17:57 PM">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="Web.sln" Description="File successfully backed up as H:\Web\Backup1\Web.sln">
+</Event><Event ErrorLevel="0" Project="" Source="Web.suo" Description="File successfully backed up as H:\Web\Backup1\Web.suo">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\BLL.csproj" Description="Project file successfully backed up as H:\Web\Backup1\BLL\BLL.csproj">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\BLL.csproj.user" Description="Project user file successfully backed up as H:\Web\Backup1\BLL\BLL.csproj.user">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\CenterBUS.cs" Description="File successfully backed up as H:\Web\Backup1\BLL\CenterBUS.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\FloorBUS.cs" Description="File successfully backed up as H:\Web\Backup1\BLL\FloorBUS.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\Properties\AssemblyInfo.cs" Description="File successfully backed up as H:\Web\Backup1\BLL\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="BLL" Source="BLL\BLL.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="BLL" Source="BLL\BLL.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\DAL.csproj" Description="Project file successfully backed up as H:\Web\Backup1\DAL\DAL.csproj">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\DAL.csproj.user" Description="Project user file successfully backed up as H:\Web\Backup1\DAL\DAL.csproj.user">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\CenterDAO.cs" Description="File successfully backed up as H:\Web\Backup1\DAL\CenterDAO.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\ConnectionTool.cs" Description="File successfully backed up as H:\Web\Backup1\DAL\ConnectionTool.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\FloorDAO.cs" Description="File successfully backed up as H:\Web\Backup1\DAL\FloorDAO.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\Properties\AssemblyInfo.cs" Description="File successfully backed up as H:\Web\Backup1\DAL\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="DAL" Source="DAL\DAL.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="DAL" Source="DAL\DAL.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="DTO" Source="DTO\DTO.csproj" Description="Project file successfully backed up as H:\Web\Backup1\DTO\DTO.csproj">
+</Event><Event ErrorLevel="0" Project="DTO" Source="DTO\DTO.csproj.user" Description="Project user file successfully backed up as H:\Web\Backup1\DTO\DTO.csproj.user">
+</Event><Event ErrorLevel="0" Project="DTO" Source="DTO\Center.cs" Description="File successfully backed up as H:\Web\Backup1\DTO\Center.cs">
+</Event><Event ErrorLevel="0" Project="DTO" Source="DTO\Floor.cs" Description="File successfully backed up as H:\Web\Backup1\DTO\Floor.cs">
+</Event><Event ErrorLevel="0" Project="DTO" Source="DTO\Properties\AssemblyInfo.cs" Description="File successfully backed up as H:\Web\Backup1\DTO\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="DTO" Source="DTO\DTO.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="DTO" Source="DTO\DTO.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="UI" Source="BLL\UI\UI.csproj" Description="Project file successfully backed up as H:\Web\Backup1\BLL\UI\UI.csproj">
+</Event><Event ErrorLevel="0" Project="UI" Source="BLL\UI\UI.csproj.user" Description="Project user file successfully backed up as H:\Web\Backup1\BLL\UI\UI.csproj.user">
+</Event><Event ErrorLevel="0" Project="UI" Source="BLL\UI\CenterUI.aspx.cs" Description="File successfully backed up as H:\Web\Backup1\BLL\UI\CenterUI.aspx.cs">
+</Event><Event ErrorLevel="0" Project="UI" Source="BLL\UI\CenterUI.aspx.designer.cs" Description="File successfully backed up as H:\Web\Backup1\BLL\UI\CenterUI.aspx.designer.cs">
+</Event><Event ErrorLevel="0" Project="UI" Source="BLL\UI\FloorUI.aspx.cs" Description="File successfully backed up as H:\Web\Backup1\BLL\UI\FloorUI.aspx.cs">
+</Event><Event ErrorLevel="0" Project="UI" Source="BLL\UI\FloorUI.aspx.designer.cs" Description="File successfully backed up as H:\Web\Backup1\BLL\UI\FloorUI.aspx.designer.cs">
+</Event><Event ErrorLevel="0" Project="UI" Source="BLL\UI\GiaodienAdmin.aspx.cs" Description="File successfully backed up as H:\Web\Backup1\BLL\UI\GiaodienAdmin.aspx.cs">
+</Event><Event ErrorLevel="0" Project="UI" Source="BLL\UI\GiaodienAdmin.aspx.designer.cs" Description="File successfully backed up as H:\Web\Backup1\BLL\UI\GiaodienAdmin.aspx.designer.cs">
+</Event><Event ErrorLevel="0" Project="UI" Source="BLL\UI\Properties\AssemblyInfo.cs" Description="File successfully backed up as H:\Web\Backup1\BLL\UI\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="UI" Source="BLL\UI\CenterUI.aspx" Description="File successfully backed up as H:\Web\Backup1\BLL\UI\CenterUI.aspx">
+</Event><Event ErrorLevel="0" Project="UI" Source="BLL\UI\FloorUI.aspx" Description="File successfully backed up as H:\Web\Backup1\BLL\UI\FloorUI.aspx">
+</Event><Event ErrorLevel="0" Project="UI" Source="BLL\UI\GiaodienAdmin.aspx" Description="File successfully backed up as H:\Web\Backup1\BLL\UI\GiaodienAdmin.aspx">
+</Event><Event ErrorLevel="0" Project="UI" Source="BLL\UI\Image\BannerDep.jpg" Description="File successfully backed up as H:\Web\Backup1\BLL\UI\Image\BannerDep.jpg">
+</Event><Event ErrorLevel="0" Project="UI" Source="BLL\UI\Web.config" Description="File successfully backed up as H:\Web\Backup1\BLL\UI\Web.config">
+</Event><Event ErrorLevel="0" Project="UI" Source="BLL\UI\UI.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="UI" Source="BLL\UI\UI.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Web.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Web.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="UI" Source="BLL\UI\UI.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

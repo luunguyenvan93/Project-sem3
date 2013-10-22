@@ -1,0 +1,7 @@
+D:\eprojectSem3\Web\DAL\obj\Debug\ResolveAssemblyReference.cache
+D:\eprojectSem3\Web\DAL\bin\Debug\DAL.dll
+D:\eprojectSem3\Web\DAL\bin\Debug\DAL.pdb
+D:\eprojectSem3\Web\DAL\bin\Debug\DTO.dll
+D:\eprojectSem3\Web\DAL\bin\Debug\DTO.pdb
+D:\eprojectSem3\Web\DAL\obj\Debug\DAL.dll
+D:\eprojectSem3\Web\DAL\obj\Debug\DAL.pdb
