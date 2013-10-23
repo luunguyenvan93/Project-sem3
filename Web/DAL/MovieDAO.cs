@@ -12,7 +12,9 @@ namespace DAL
         public DataTable getAll()
         {
             OpenConnection();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from movie", conn);
+            SqlCommand cmd = new SqlCommand("selectMovie", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable("movie");
             da.Fill(dt);
             CloseConnection();
@@ -21,7 +23,8 @@ namespace DAL
         public void insert(Movie movie)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Insert Into movie Values(@movieName,@movieDiscription,@showTime,@movieImage)", conn);
+            SqlCommand cmd = new SqlCommand("addMovie", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@movieName", movie.movieName);
             cmd.Parameters.Add("@movieDiscription", movie.movieDiscription);
             cmd.Parameters.Add("@showTime", movie.showTime);
@@ -32,7 +35,8 @@ namespace DAL
         public void update(Movie movie)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Update movie Set movieName=@movieName, movieDiscription=@movieDiscription, showTime=@showTime, movieImage=@movieImage where movieID = @movieID", conn);
+            SqlCommand cmd = new SqlCommand("updateMovie", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@movieID", movie.movieID);
             cmd.Parameters.Add("@movieName", movie.movieName);
             cmd.Parameters.Add("@movieDiscription", movie.movieDiscription);
@@ -44,15 +48,19 @@ namespace DAL
         public void delete(Movie movie)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Delete movie where movieID = @movieID", conn);
+            SqlCommand cmd = new SqlCommand("deleteMovie", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@movieID", movie.movieID);
             cmd.ExecuteNonQuery();
             CloseConnection();
         }
-        public DataTable loadCmbCenter()
+        public DataTable search(string movieName)
         {
             OpenConnection();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from movie", conn);
+            SqlCommand cmd = new SqlCommand("searchMovie", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@movieName", movieName);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             CloseConnection();

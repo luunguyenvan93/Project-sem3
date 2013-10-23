@@ -12,7 +12,8 @@ namespace DAL
         public DataTable getAll()
         {
             OpenConnection();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from gallery", conn);
+            SqlCommand cmd = new SqlCommand("selectGallery", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
             DataTable dt = new DataTable("gallery");
             da.Fill(dt);
             CloseConnection();
@@ -21,7 +22,8 @@ namespace DAL
         public void insert(Gallery gallery)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Insert Into gallery Values(@imageName,@categoryID)", conn);
+            SqlCommand cmd = new SqlCommand("addGallery", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@imageName", gallery.imageName);
             cmd.Parameters.Add("@categoryID", gallery.categoryID);
             cmd.ExecuteNonQuery();
@@ -30,7 +32,8 @@ namespace DAL
         public void update(Gallery gallery)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Update gallery Set imageName=@imageName,categoryID = @categoryID where imageID = @imageID", conn);
+            SqlCommand cmd = new SqlCommand("updateGallery", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@imageID", gallery.imageID);
             cmd.Parameters.Add("@imageName", gallery.imageName);
             cmd.Parameters.Add("@categoryID", gallery.categoryID);
@@ -40,15 +43,19 @@ namespace DAL
         public void delete(Gallery gallery)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Delete gallery where imageID = @imageID", conn);
+            SqlCommand cmd = new SqlCommand("deleteGallery", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@imageID", gallery.imageID);
             cmd.ExecuteNonQuery();
             CloseConnection();
         }
-        public DataTable loadCmbCenter()
+        public DataTable search(string imageName)
         {
             OpenConnection();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from gallery", conn);
+            SqlCommand cmd = new SqlCommand("searchGallery", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@imageName", imageName);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             CloseConnection();

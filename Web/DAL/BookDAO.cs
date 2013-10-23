@@ -12,7 +12,9 @@ namespace DAL
         public DataTable getAll()
         {
             OpenConnection();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from book", conn);
+            SqlCommand cmd = new SqlCommand("selectBook", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable("book");
             da.Fill(dt);
             CloseConnection();
@@ -21,7 +23,9 @@ namespace DAL
         public void insert(Book book)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Insert Into book Values(@customerID,@BookDate,@status)", conn);
+            SqlCommand cmd = new SqlCommand("addBook", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@movieID", book.movieID);
             cmd.Parameters.Add("@customerID", book.customerID);
             cmd.Parameters.Add("@BookDate",book.BookDate);
             cmd.Parameters.Add("@status", book.status);
@@ -31,7 +35,8 @@ namespace DAL
         public void update(Book book)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Update book Set customerID=@customerID, BookDate=@BookDate, status=@status where movieID = @movieID", conn);
+            SqlCommand cmd = new SqlCommand("updateBook", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@movieID", book.movieID);
             cmd.Parameters.Add("@customerID", book.customerID);
             cmd.Parameters.Add("@BookDate", book.BookDate);
@@ -42,15 +47,21 @@ namespace DAL
         public void delete(Book book)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Delete book where movieID = @movieID", conn);
+            SSqlCommand cmd = new SqlCommand("deleteBook", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@movieID", book.movieID);
+            cmd.Parameters.Add("@customerID", book.customerID);
             cmd.ExecuteNonQuery();
             CloseConnection();
         }
-        public DataTable loadCmbCenter()
+        public DataTable search(int movieID, int customerID)
         {
             OpenConnection();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from movie", conn);
+            SqlCommand cmd = new SqlCommand("searchBook", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@movieID", movieID);
+            cmd.Parameters.Add("@customerID", customerID);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             CloseConnection();

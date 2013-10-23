@@ -12,7 +12,9 @@ namespace DAL
         public DataTable getAll()
         {
             OpenConnection();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from floor", conn);
+            SqlCommand cmd = new SqlCommand("selectFloor", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable("floor");
             da.Fill(dt);
             CloseConnection();
@@ -21,7 +23,8 @@ namespace DAL
         public void insert(Floor floor)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Insert Into floor Values(@floorName,@centerID)", conn);
+            SqlCommand cmd = new SqlCommand("addFloor", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@floorName",floor.floorName);
             cmd.Parameters.Add("@centerID", floor.centerID);
             cmd.ExecuteNonQuery();
@@ -30,7 +33,8 @@ namespace DAL
         public void update(Floor floor)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Update floor Set floorName=@floorName,centerID = @centerID where floorID = @floorID", conn);
+            SqlCommand cmd = new SqlCommand("updateFloor", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@floorID", floor.floorID);
             cmd.Parameters.Add("@floorName",floor.floorName);
             cmd.Parameters.Add("@centerID", floor.centerID);
@@ -40,15 +44,19 @@ namespace DAL
         public void delete(Floor floor)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Delete floor where floorID = @floorID", conn);
+            SqlCommand cmd = new SqlCommand("deleteFloor", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@floorID", floor.floorID);
             cmd.ExecuteNonQuery();
             CloseConnection();
         }
-        public DataTable loadCmbCenter()
+        public DataTable search(string floorName)
         {
             OpenConnection();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from center",conn);
+            SqlCommand cmd = new SqlCommand("searchCenter", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@floorName", floorName);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             CloseConnection();

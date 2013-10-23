@@ -12,7 +12,9 @@ namespace DAL
         public DataTable getAll()
         {
             OpenConnection();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from food", conn);
+            SqlCommand cmd = new SqlCommand("selectFood", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable("food");
             da.Fill(dt);
             CloseConnection();
@@ -21,7 +23,8 @@ namespace DAL
         public void insert(Food food)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Insert Into food Values(@foodName,@foodDiscription,@foodImage,@price)", conn);
+            SqlCommand cmd = new SqlCommand("addFood", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@foodName", food.foodName);
             cmd.Parameters.Add("@foodDiscription", food.foodDiscription);
             cmd.Parameters.Add("@foodImage", food.foodImage);
@@ -32,7 +35,8 @@ namespace DAL
         public void update(Food food)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Update food Set foodName=@foodName,foodDiscription = @foodDiscription,foodImage=@foodImage,price=@price where foodID = @foodID", conn);
+            SqlCommand cmd = new SqlCommand("updateFood", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@foodID", food.foodID);
             cmd.Parameters.Add("@foodName", food.foodName);
             cmd.Parameters.Add("@foodDiscription", food.foodDiscription);
@@ -44,15 +48,19 @@ namespace DAL
         public void delete(Food food)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Delete food where foodID = @foodID", conn);
+            SqlCommand cmd = new SqlCommand("deleteFood", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@fooID", food.foodID);
             cmd.ExecuteNonQuery();
             CloseConnection();
         }
-        public DataTable loadCmbCenter()
+        public DataTable search(string foodName)
         {
             OpenConnection();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from center", conn);
+            SqlCommand cmd = new SqlCommand("searchFood", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@foodName", foodName);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             CloseConnection();

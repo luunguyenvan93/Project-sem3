@@ -12,7 +12,9 @@ namespace DAL
         public DataTable getAll()
         {
             OpenConnection();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from product", conn);
+            SqlCommand cmd = new SqlCommand("selectProduct", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable("product");
             da.Fill(dt);
             CloseConnection();
@@ -21,7 +23,8 @@ namespace DAL
         public void insert(Product product)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Insert Into product Values(@productName,@productDiscripiton,@price,@categoryID,@shopID)", conn);
+            SqlCommand cmd = new SqlCommand("addProduct", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@productName", product.productName);
             cmd.Parameters.Add("@productDiscripiton", product.productDiscripiton);
             cmd.Parameters.Add("@price", product.price);
@@ -33,7 +36,8 @@ namespace DAL
         public void update(Product product)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Update product Set productName=@productName,productDiscripiton=@productDiscripiton,price=@price,categoryID=@categoryID,shopID=@shopID  where productID = @productID", conn);
+            SqlCommand cmd = new SqlCommand("updateProduct", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@productName", product.productName);
             cmd.Parameters.Add("@productDiscripiton", product.productDiscripiton);
             cmd.Parameters.Add("@price", product.price);
@@ -45,15 +49,18 @@ namespace DAL
         public void delete(Product product)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Delete product where productID = @productID", conn);
+            SqlCommand cmd = new SqlCommand("deleteProduct", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@productID", product.productID);
             cmd.ExecuteNonQuery();
             CloseConnection();
         }
-        public DataTable loadCmbCenter()
+        public DataTable search(string productName)
         {
             OpenConnection();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from center", conn);
+            SqlCommand cmd = new SqlCommand("searchProduct", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             CloseConnection();

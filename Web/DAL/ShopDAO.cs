@@ -12,7 +12,9 @@ namespace DAL
         public DataTable getAll()
         {
             OpenConnection();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from shop", conn);
+            SqlCommand cmd = new SqlCommand("selectShop", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable("shop");
             da.Fill(dt);
             CloseConnection();
@@ -21,34 +23,38 @@ namespace DAL
         public void insert(Shop shop)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Insert Into shop Values(@shopName,@floorID)", conn);
-            cmd.Parameters.Add("@shopName", shop.shopName);
-            cmd.Parameters.Add("@floorID", shop.floorID);
+            SqlCommand cmd = new SqlCommand("addShop", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("(@shopName ", shop.shopName);
             cmd.ExecuteNonQuery();
             CloseConnection();
         }
         public void update(Shop shop)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Update shop Set shopName=@shopName,floorID = @floorID where floorID = @floorID", conn);
+            SqlCommand cmd = new SqlCommand("updateShop", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@shopID", shop.shopID);
             cmd.Parameters.Add("@shopName", shop.shopName);
-            cmd.Parameters.Add("@floorID", shop.floorID);       
+            cmd.Parameters.Add("@floorID", shop.floorID);
             cmd.ExecuteNonQuery();
             CloseConnection();
         }
         public void delete(Shop shop)
         {
-            OpenConnection();
-            SqlCommand cmd = new SqlCommand("Delete shop where shopID = @shopID", conn);
+            SqlCommand cmd = new SqlCommand("deleteShop", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@shopID", shop.shopID);
             cmd.ExecuteNonQuery();
             CloseConnection();
         }
-        public DataTable loadCmbCenter()
+        public DataTable search(string shopName)
         {
             OpenConnection();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from center", conn);
+            SqlCommand cmd = new SqlCommand("searchShop", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@shopName", shopName);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             CloseConnection();
