@@ -42,10 +42,10 @@ namespace BLL
             gallery.imageID = imageID;
             galleryDAO.delete(gallery);
         }
-        public DataTable loadCmbCenter()
+        public DataTable search(string imageName)
         {
             DataTable dt = new DataTable();
-            dt = galleryDAO.loadCmbCenter();
+            dt = galleryDAO.search(imageName);
             return dt;
         }
     }

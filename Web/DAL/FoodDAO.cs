@@ -29,6 +29,7 @@ namespace DAL
             cmd.Parameters.Add("@foodDiscription", food.foodDiscription);
             cmd.Parameters.Add("@foodImage", food.foodImage);
             cmd.Parameters.Add("@price", food.price);
+            cmd.Parameters.Add("@centerID", food.centerID);
             cmd.ExecuteNonQuery();
             CloseConnection();
         }
@@ -42,6 +43,7 @@ namespace DAL
             cmd.Parameters.Add("@foodDiscription", food.foodDiscription);
             cmd.Parameters.Add("@foodImage", food.foodImage);
             cmd.Parameters.Add("@price", food.price);
+            cmd.Parameters.Add("@centerID", food.centerID);
             cmd.ExecuteNonQuery();
             CloseConnection();
         }
@@ -50,7 +52,7 @@ namespace DAL
             OpenConnection();
             SqlCommand cmd = new SqlCommand("deleteFood", conn);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@fooID", food.foodID);
+            cmd.Parameters.Add("@foodID", food.foodID);
             cmd.ExecuteNonQuery();
             CloseConnection();
         }

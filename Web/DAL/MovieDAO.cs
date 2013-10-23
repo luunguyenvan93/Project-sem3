@@ -29,6 +29,8 @@ namespace DAL
             cmd.Parameters.Add("@movieDiscription", movie.movieDiscription);
             cmd.Parameters.Add("@showTime", movie.showTime);
             cmd.Parameters.Add("@movieImage", movie.movieImage);
+            cmd.Parameters.Add("@movieImage", movie.movieImage);
+            cmd.Parameters.Add("@centerID", movie.centerID);
             cmd.ExecuteNonQuery();
             CloseConnection();
         }
@@ -42,6 +44,7 @@ namespace DAL
             cmd.Parameters.Add("@movieDiscription", movie.movieDiscription);
             cmd.Parameters.Add("@showTime", movie.showTime);
             cmd.Parameters.Add("@movieImage", movie.movieImage);
+            cmd.Parameters.Add("@centerID", movie.centerID);
             cmd.ExecuteNonQuery();
             CloseConnection();
         }

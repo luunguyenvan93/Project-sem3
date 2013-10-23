@@ -26,6 +26,7 @@ namespace DAL
             SqlCommand cmd = new SqlCommand("addShop", conn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("(@shopName ", shop.shopName);
+            cmd.Parameters.Add("(@floorID ", shop.floorID);
             cmd.ExecuteNonQuery();
             CloseConnection();
         }

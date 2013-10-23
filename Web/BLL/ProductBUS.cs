@@ -48,10 +48,10 @@ namespace BLL
             product.productID = productID;
             productDAO.delete(product);
         }
-        public DataTable loadCmbCenter()
+        public DataTable search(string productName)
         {
             DataTable dt = new DataTable();
-            dt = productDAO.loadCmbCenter();
+            dt = productDAO.search(productName);
             return dt;
         }
     }

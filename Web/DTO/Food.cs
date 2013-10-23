@@ -12,6 +12,7 @@ namespace DTO
         public string _foodDiscription;
         public string _foodImage;
         public double _price;
+        public int _centerID;
         public int foodID
         {
             get { return _foodID; }
@@ -36,6 +37,11 @@ namespace DTO
         {
             get { return _price; }
             set { _price = value; }
+        }
+        public int centerID
+        {
+            get { return _centerID; }
+            set { _centerID = value; }
         }
     }
 }

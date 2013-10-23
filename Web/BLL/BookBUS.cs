@@ -44,10 +44,10 @@ namespace BLL
             book.movieID = movieID;
             bookDAO.delete(book);
         }
-        public DataTable loadCmbCenter()
+        public DataTable search(int movieID, int customerID)
         {
             DataTable dt = new DataTable();
-            dt = bookDAO.loadCmbCenter();
+            dt = bookDAO.search(movieID,customerID);
             return dt;
         }
     }

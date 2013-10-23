@@ -42,10 +42,10 @@ namespace BLL
             floor.floorID = floorID;
             floorDAO.delete(floor);
         }
-        public DataTable loadCmbCenter()
+        public DataTable search(string floorName)
         {
             DataTable dt = new DataTable();
-            dt = floorDAO.loadCmbCenter();
+            dt = floorDAO.search(floorName);
             return dt;
         }
     }

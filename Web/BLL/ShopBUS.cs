@@ -42,10 +42,10 @@ namespace BLL
             shop.shopID = shopID;
             shopDAO.delete(shop);
         }
-        public DataTable loadCmbCenter()
+        public DataTable search(string shopName)
         {
             DataTable dt = new DataTable();
-            dt = shopDAO.loadCmbCenter();
+            dt = shopDAO.search(shopName);
             return dt;
         }
     }

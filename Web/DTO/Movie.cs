@@ -12,6 +12,7 @@ namespace DTO
         public string _movieDiscription;
         public DateTime _showTime;
         public string _movieImage;
+        public int _centerID;
         public int movieID
         {
             get { return _movieID; }
@@ -36,6 +37,11 @@ namespace DTO
         {
             get { return _movieImage; }
             set { _movieImage = value; }
+        }
+        public int centerID
+        {
+            get { return _centerID; }
+            set { _centerID = value; }
         }
     }
 }

@@ -21,13 +21,14 @@ namespace BLL
             dt = foodDAO.getAll();
             return dt;
         }
-        public void insert(string foodName, string foodDiscription, string foodImage, double price)
+        public void insert(string foodName, string foodDiscription, string foodImage, double price, int centerID)
         {
             Food food = new Food();
             food.foodName = foodName;
             food.foodDiscription = foodDiscription;
             food.foodImage = foodImage;
             food.price = price;
+            food.centerID = centerID;
             foodDAO.insert(food);
         }
         public void update(int foodID, string foodName, string foodDiscription, string foodImage, double price)
@@ -46,10 +47,10 @@ namespace BLL
             food.foodID = foodID;
             foodDAO.delete(food);
         }
-        public DataTable loadCmbCenter()
+        public DataTable search(string foodName)
         {
             DataTable dt = new DataTable();
-            dt = foodDAO.loadCmbCenter();
+            dt = foodDAO.search(foodName);
             return dt;
         }
     }

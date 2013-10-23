@@ -40,10 +40,10 @@ namespace BLL
             category.categoryID = categoryID;
             categoryDAO.delete(category);
         }
-        public DataTable loadCmbCenter()
+        public DataTable search(string categoryName)
         {
             DataTable dt = new DataTable();
-            dt = categoryDAO.loadCmbCenter();
+            dt = categoryDAO.search(categoryName);
             return dt;
         }
     }
